@@ -217,7 +217,8 @@
         label.textColor = [UIColor whiteColor];
         label.text = arr[i];
         
-        CGSize size = [label.text sizeWithFont:label.font];
+        
+        CGSize size = [label.text sizeWithAttributes:@{NSFontAttributeName:label.font}];
         CGFloat W = size.width;
         CGFloat H = CGRectGetHeight(btnView.frame) / 2;
         CGFloat X = 130/2 + i * (interval + W);

@@ -37,7 +37,7 @@
 {
     self.label.text = placeholder;
     self.label.hidden = placeholder.length == 0;
-    CGSize size = [placeholder sizeWithFont:PlaceholderFont];
+    CGSize size = [placeholder sizeWithAttributes:@{NSFontAttributeName:PlaceholderFont}];
     self.label.frame = (CGRect){5,7, size};
 }
 

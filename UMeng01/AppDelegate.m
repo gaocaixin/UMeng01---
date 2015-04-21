@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CXMineTableViewController.h"
-#import "TextViewController.h"
+#import "LYTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -22,9 +21,21 @@
     
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TextViewController alloc] init]];
+    self.window.rootViewController = [[LYTabBarController alloc] init];
     
     [self.window makeKeyAndVisible];
+    
+    UINavigationBar *bar = [UINavigationBar appearance];
+    bar.barTintColor = [UIColor colorWithRed:(CGFloat)241/255 green:(CGFloat)114/255 blue:(CGFloat)155/255 alpha:1];
+    [bar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [bar setTranslucent:YES];
+    [bar setBackIndicatorImage:[UIImage imageNamed:@"title_btn_back"]];
+    
+    
+    UIButton *back = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [back setImage:[UIImage imageNamed:@"title_btn_back"] forState:UIControlStateNormal];
+    
+    bar.backItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"title_btn_back"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     return YES;
 }

@@ -59,6 +59,11 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(-30, 0, 0, 0);
     self.tableView.rowHeight = 45;
+    
+    UIButton *back = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [back setImage:[UIImage imageNamed:@"title_btn_back"] forState:UIControlStateNormal];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:back];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import "TextViewController.h"
 #import "CXMineTableViewController.h"
+#import "PhotoSelectController.h"
 
 @interface TextViewController ()
 
@@ -34,7 +35,7 @@
 
 - (void)btnClick:(UIButton *)btn
 {
-    [self.navigationController pushViewController:[[CXMineTableViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[PhotoSelectController alloc] init] animated:YES];
 }
 
 @end

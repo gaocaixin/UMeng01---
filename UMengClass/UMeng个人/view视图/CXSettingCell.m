@@ -123,7 +123,7 @@
     UIView *cuttingLineMid = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetHeight(self.frame) - 1, CGRectGetWidth(self.frame) - 2 * 10, 1)];
     cuttingLineMid.backgroundColor = cuttingLineTop.backgroundColor;
     
-    int totalRows = [self.tableView numberOfRowsInSection:indexPath.section];
+    long totalRows = [self.tableView numberOfRowsInSection:indexPath.section];
 
     if (indexPath.row == 0) {
         [self addSubview:cuttingLineTop];

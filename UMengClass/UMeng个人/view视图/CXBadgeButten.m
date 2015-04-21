@@ -35,7 +35,7 @@
         CGRect frame = self.frame;
         CGSize imageSize = self.currentBackgroundImage.size;
         if (badgeValue.length > 1) {
-            CGSize badgeSize = [badgeValue sizeWithFont:self.titleLabel.font];
+            CGSize badgeSize = [badgeValue sizeWithAttributes:@{NSFontAttributeName:self.titleLabel.font}];
             imageSize.width = badgeSize.width + 10;
         }
         frame.size.width = imageSize.width;
